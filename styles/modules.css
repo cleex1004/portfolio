@@ -1,0 +1,43 @@
+.icon-menu {
+  display: inline-block;
+  float:right;
+  font-size: 2em;
+}
+
+.main-nav {
+
+}
+
+.main-nav ul {
+  display: none;
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+
+.main-nav:hover ul {
+  display: block;
+}
+
+@media only screen and (min-width:769px) {
+  .icon-menu {
+    visibility: hidden;
+  }
+  .main-nav ul {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  .main-nav:hover ul {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  .main-nav li {
+    border: none;
+    justify-content: space-around;
+    padding: 0;
+  }
+}
