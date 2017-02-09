@@ -19,6 +19,44 @@
   display: block;
 }
 
+.main-nav li {
+  font-family: 'Arimo';
+  font-size: 1.5em;
+}
+
+.project-template {
+
+}
+
+.project-header {
+
+}
+
+.project-name {
+
+}
+
+.project-date {
+  font-family:'PT Sans Narrow';
+}
+
+.project-image {
+
+}
+
+.project-link {
+
+}
+
+.project-description {
+
+}
+
+.footer p {
+  font-size: 1.25em;
+  font-family: 'arimo';
+}
+
 @media only screen and (min-width:769px) {
   .icon-menu {
     visibility: hidden;
@@ -36,7 +74,7 @@
     margin-bottom: 0.5em;
   }
   .main-nav li {
-    border: none;
+    border-bottom: 1px solid black;
     justify-content: space-around;
     padding: 0;
   }
