@@ -23,6 +23,18 @@ img {
   max-width: 100%;
 }
 
-p{
+p {
   font-family: 'Sahitya';
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: deeppink;
 }
