@@ -21,5 +21,5 @@ var projectData = [
     description: '201 week 4 group project',
     image: 'http://i.imgur.com/v9bw6xj.png',
     link: 'https://the-meme-team.github.io/meme-ory/'
-  },
+  }
 ];

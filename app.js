@@ -1,6 +1,6 @@
 'use strict';
 
-var projects = [];
+var projectsArray = [];
 
 function Project(opts) {
   this.name = opts.name;
@@ -11,21 +11,24 @@ function Project(opts) {
 }
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('article.project-template');
+  var $newProject = $('section.project-template').clone();
   $newProject.removeClass('project-template');
   $newProject.find('h4.project-name').html(this.name);
   $newProject.find('h4.project-date').html(this.date);
-  $newProject.find('p').html(this.description);
   $newProject.find('img').attr('src', this.image);
+  $newProject.find('p').html(this.description);
   $newProject.find('a').attr('href', this.link);
   return $newProject;
 };
 
-projectData.forEach(function(projectObject) {
-  projects.push(new Project(projectObject));
-})
+projectData.forEach(function(projObject) {
+  projectsArray.push(new Project(projObject));
+});
 
-projects.forEach(function(a) {
-  console.log(a);
+projectsArray.forEach(function(a) {
   $('#projects').append(a.toHtml());
-})
+});
+
+// articles.forEach(function(a) {
+//   $('#articles').append(a.toHtml());
+// });
