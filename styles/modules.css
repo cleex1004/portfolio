@@ -19,6 +19,54 @@
   display: block;
 }
 
+.main-nav li {
+  font-family: 'Arimo';
+  font-size: 1.5em;
+}
+
+.project-template {
+  display: none;
+}
+
+.project-header {
+
+}
+
+.project-name {
+
+}
+
+.project-date {
+  font-family:'PT Sans Narrow';
+}
+
+.project-image {
+
+}
+
+.project-link {
+
+}
+
+.project-description {
+
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.footer p {
+  font-size: 1.25em;
+  font-family: 'arimo';
+}
+
+.footer div {
+  font-size: .5em;
+  align-items: center;
+}
+
 @media only screen and (min-width:769px) {
   .icon-menu {
     visibility: hidden;
@@ -36,7 +84,6 @@
     margin-bottom: 0.5em;
   }
   .main-nav li {
-    border: none;
     justify-content: space-around;
     padding: 0;
   }

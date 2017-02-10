@@ -1,16 +1,40 @@
 /*font styles*/
 h1 {
   font-size: 2.5em;
+  font-family: 'Arimo';
 }
 
 h2 {
   font-size: 2em;
+  font-family: 'Arimo';
 }
 
 h3 {
   font-size: 1.5em;
+  font-family: 'Arimo';
+}
+
+h4 {
+  font-size: 1.25em;
+  font-family: 'Arimo';
 }
 
 img {
   max-width: 100%;
+}
+
+p {
+  font-family: 'Sahitya';
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: deeppink;
 }

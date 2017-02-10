@@ -1,10 +1,34 @@
 'use strict';
 
-function Project(name, date, description, image) {
-  this.name = name;
-  this.date = date;
-  this.description = description;
-  this.image = image;
+var projectsArray = [];
+
+function Project(opts) {
+  this.name = opts.name;
+  this.date = opts.date;
+  this.description = opts.description;
+  this.image = opts.image;
+  this.link = opts.link;
 }
 
-var busmall = new Project('Busmall', 'January 2017', '201 week 3 project');
+Project.prototype.toHtml = function() {
+  var $newProject = $('section.project-template').clone();
+  $newProject.removeClass('project-template');
+  $newProject.find('h4.project-name').html(this.name);
+  $newProject.find('h4.project-date').html(this.date);
+  $newProject.find('img').attr('src', this.image);
+  $newProject.find('p').html(this.description);
+  $newProject.find('a').attr('href', this.link);
+  return $newProject;
+};
+
+projectData.forEach(function(projObject) {
+  projectsArray.push(new Project(projObject));
+});
+
+projectsArray.forEach(function(a) {
+  $('#projects').append(a.toHtml());
+});
+
+// articles.forEach(function(a) {
+//   $('#articles').append(a.toHtml());
+// });
