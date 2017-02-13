@@ -1,11 +1,7 @@
 .icon-menu {
   display: inline-block;
   float:right;
-  font-size: 2em;
-}
-
-.main-nav {
-
+  font-size: 2.5em;
 }
 
 .main-nav ul {
@@ -24,12 +20,19 @@
   font-size: 1.5em;
 }
 
-.project-template {
-  display: none;
+.project-header {
+  margin-bottom: 1em;
+  margin-top: 1em;
+  display: inline-block;
+  width: 100%;
 }
 
-.project-header {
+.project-body {
+ margin-left: 1.5em;
+}
 
+.project-text {
+  margin-left: 1.5em;
 }
 
 .project-name {

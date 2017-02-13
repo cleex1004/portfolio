@@ -1,11 +1,28 @@
 footer {
-  width:50%;
   margin-left: 25%;
   margin-right: 25%;
+  width: 50%;
+  clear: both;
 }
 
 .center {
   text-align: center;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .header {
@@ -14,11 +31,6 @@ footer {
 
 .tab-content {
   margin: 5%;
-}
-
-.project-header {
-  margin-bottom: 1em;
-  margin-top: 1em;
 }
 
 .section-head {
