@@ -15,20 +15,21 @@
   <body>
     <main>
       <header>
-        <section>
+        <section class="header">
           <h1 class="center">Christina Lee</h1>
         </section>
         <nav class="main-nav">
           <h3 class="icon-menu"></h3>
           <ul>
-            <li><a href="#" class="icon-home"> Home</a></li>
-            <li><a href="#" class="icon-folder"> Projects</a></li>
-            <li><a href="https://github.com/cleex1004" class="icon-github"> Github</a></li>
-            <li><a href="#" class="icon-envelop"> Contact</a></li>
+            <li class="tab"><a href="#" class="icon-home"> Home</a></li>
+            <li class="tab" data-content="projects"><a href="#" class="icon-folder"> Projects</a></li>
+            <li class="tab"><a href="https://github.com/cleex1004" class="icon-github"> Github</a></li>
+            <li class="tab" data-content="about-me"><a href="#" class="icon-woman"> About Me</a></li>
+            <li class="tab" data-content="contact"><a href="#" class="icon-envelop"> Contact</a></li>
           </ul>
         </nav>
       </header>
-      <section id="projects">
+      <section id="projects" class="tab-content">
         <h2 class="center">Projects</h2>
         <section>
           <section class="project-template">
@@ -44,10 +45,14 @@
           </section>
         </section>
       </section>
-      <section>
+      <section id="about-me" class="tab-content">
         <h2 class="center">About Me</h2>
         <p>I feel like on the first day of 301, I was thrown into the ocean, not even the deep end pool but the ocean. It's the second day but it feels like its been a week already. Remember to breathe and break down tasks so you do not get overwhelmed.</p>
         <p>Day 2 wasn't as bad. The lab was pretty straight forward. I'm feeling a little bit more confident. The morning of day 3 was a bit rough because the sleep deprivation is finally catching up. Hopefully I will be able get a good nights rest so I feel bettter tomorrow.</p>
+      </section>
+      <section id="contact" class="tab-content">
+        <h2 class="center">Contact</h2>
+        <p>contact info here, maybe a form</p>
       </section>
     </main>
     <footer>
@@ -64,5 +69,6 @@
   crossorigin="anonymous"></script>
     <script src="projects.js" type="text/javascript"></script>
     <script src="app.js" type="text/javascript"></script>
+    <script src="projectView.js" type="text/javascript"></script>
   </body>
 </html>

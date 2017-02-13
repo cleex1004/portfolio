@@ -1,9 +1,22 @@
-.center {
-  text-align: center;
-}
-
 footer {
   width:50%;
   margin-left: 25%;
   margin-right: 25%;
+}
+
+.header {
+  margin: 3%;
+}
+
+.tab-content {
+  margin: 5%;
+}
+
+.project-template {
+  margin: 2%;
+}
+
+.project-header {
+  margin-bottom: 1em;
+  margin-top: 1em;
 }

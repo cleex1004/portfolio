@@ -1,40 +1,57 @@
 /*font styles*/
+*{
+  background-color: #E6F7FF;
+}
+
 h1 {
   font-size: 2.5em;
   font-family: 'Arimo';
+  color: #FF0066;
 }
 
 h2 {
   font-size: 2em;
   font-family: 'Arimo';
+  color: #FF0066;
+
 }
 
 h3 {
   font-size: 1.5em;
   font-family: 'Arimo';
+  color: #FF0066;
+
 }
 
 h4 {
   font-size: 1.25em;
   font-family: 'Arimo';
+  color: #FF0066;
+
 }
 
 img {
   max-width: 100%;
+  max-height: 200px;
 }
 
 p {
   font-family: 'Sahitya';
+  color: #000080;
 }
 
 a:link {
-  color: black;
+  color: #000080;;
 }
 
 a:visited {
-  color: black;
+  color: #000080;
 }
 
 a:hover {
-  color: deeppink;
+  color: #00E0D5;
+}
+
+.center {
+  text-align: center;
 }
