@@ -4,10 +4,6 @@
   font-size: 2em;
 }
 
-.main-nav {
-
-}
-
 .main-nav ul {
   display: none;
   padding: 0;
@@ -24,12 +20,19 @@
   font-size: 1.5em;
 }
 
-.project-template {
-  display: none;
+.project-header {
+  margin-bottom: 1em;
+  margin-top: 1em;
+  display: inline-block;
+  width: 100%;
 }
 
-.project-header {
+.project-body {
+ margin-left: 1.5em;
+}
 
+.project-text {
+  margin-left: 1.5em;
 }
 
 .project-name {
