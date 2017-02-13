@@ -4,6 +4,10 @@ footer {
   margin-right: 25%;
 }
 
+.center {
+  text-align: center;
+}
+
 .header {
   margin: 3%;
 }
