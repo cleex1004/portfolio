@@ -10,6 +10,17 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
     <link href="https://fonts.googleapis.com/css?family=Arimo|Arvo|PT+Sans+Narrow|Raleway|Sahitya" rel="stylesheet">
+    <script id="project-template" type="text/x-handlebars-template">
+      <header class="project-header">
+        <h4 class="project-name">{{name}}</h4>
+        <h4 class="project-date">{{date}}</h4>
+      </header>
+      <section>
+        <img src="{{image}}" class="project-image">
+        <p class="project-description">{{description}}</p>
+        <a href="{{link}}" class="project-link">LINK</a>
+      </section>
+    </script>
   </head>
 
   <body>
@@ -30,28 +41,16 @@
         </nav>
       </header>
       <section id="projects" class="tab-content">
-        <h2 class="center">Projects</h2>
-        <section>
-          <section class="project-template">
-            <header class="project-header">
-              <h4 class="project-name">NAME/TITLE</h4>
-              <h4 class="project-date">DATE</h4>
-            </header>
-            <section>
-              <img src="" class="project-image">
-              <p class="project-description">DESCRIPTION</p>
-              <a href="" class="project-link">LINK</a>
-            </section>
-          </section>
-        </section>
+        <h2 class="center section-head">Projects</h2>
       </section>
       <section id="about-me" class="tab-content">
-        <h2 class="center">About Me</h2>
+        <h2 class="center section-head">About Me</h2>
         <p>I feel like on the first day of 301, I was thrown into the ocean, not even the deep end pool but the ocean. It's the second day but it feels like its been a week already. Remember to breathe and break down tasks so you do not get overwhelmed.</p>
         <p>Day 2 wasn't as bad. The lab was pretty straight forward. I'm feeling a little bit more confident. The morning of day 3 was a bit rough because the sleep deprivation is finally catching up. Hopefully I will be able get a good nights rest so I feel bettter tomorrow.</p>
+        <p>I'm glad its a new week and we wont be on a rushed schedule this week. Last week was difficult. I think I might need to use handlebars a few more times. I understand its a template and that I need to make it in the head, add a script tag at the end of my html doc with with the other script tags, but before the ones linking th javascript. then I need to write a method that compiles and renders from source.</p>
       </section>
       <section id="contact" class="tab-content">
-        <h2 class="center">Contact</h2>
+        <h2 class="center section-head">Contact</h2>
         <p>contact info here, maybe a form</p>
       </section>
     </main>
@@ -67,6 +66,7 @@
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
     <script src="projects.js" type="text/javascript"></script>
     <script src="app.js" type="text/javascript"></script>
     <script src="projectView.js" type="text/javascript"></script>
