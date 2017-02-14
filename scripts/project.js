@@ -19,7 +19,8 @@ Project.loadAll = function(rawData) {
   rawData.forEach(function(ele) {
     Project.all.push(new Project(ele));
   })
-}
+};
+
 Project.fetchAll = function() {
   if (localStorage.rawData) {
     let ajaxEtag = $.ajax({
@@ -59,4 +60,4 @@ Project.fetchAll = function() {
       projectView.initIndexPage();
     });
   }
-}
+};
