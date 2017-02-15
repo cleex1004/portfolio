@@ -16,23 +16,7 @@
 }
 
 .main-nav li {
-  font-family: 'Arimo';
   font-size: 1.5em;
-}
-
-.project-header {
-  margin-bottom: 1em;
-  margin-top: 1em;
-  display: inline-block;
-  width: 100%;
-}
-
-.project-body {
- margin-left: 1.5em;
-}
-
-.project-text {
-  margin-left: 1.5em;
 }
 
 .project-name {
@@ -53,6 +37,10 @@
 
 .project-description {
 
+}
+
+#published-label {
+  font-size: 1.4em;
 }
 
 .footer {

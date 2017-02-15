@@ -41,8 +41,8 @@
       </header>
       <section id="home" class="tab-content">
       </section>
-      <section id="write" class="tab-content">
-        <h1>New Project</h1>
+      <section id="write">
+        <h2 class="center">New Project</h2>
         <form action="#" id="new-form">
           <label>
             <input type="text" id="project-name" placeholder="Project Name" required>
@@ -50,25 +50,25 @@
           <label>
             <input type="text" id="project-date" placeholder="Project Date" required>
           </label>
-          <textarea id="project-description" rows="8" cols="40" required></textarea>
+          <textarea id="project-description" placeholder="Project Description" rows="8" cols="40" required></textarea>
           <label>
             <input type="text" id="project-image" placeholder="Project Image" required>
           </label>
           <label>
             <input type="text" id="project-link" placeholder="Project Link" required>
           </label>
-          <label>
+          <!-- <label id="published-label">
             <input type="checkbox" id="project-published"> Published
-          </label>
+          </label> -->
         </form>
       </section>
       <section id="projects" class="tab-content">
         <h2 class="center section-head">Projects</h2>
       </section>
-      <section id="project-export">
-        <label id="export-field" for="project-json" class="pull-right">
+      <section id="project-export" class="">
+        <label id="export-field" for="project-json">
           <input type="text" readonly id="project-json">
-          When finalized, copy the above JSON, and paste into blogArticles.js
+          <p class="text-right">When finalized, copy the above JSON, and paste into projectData.json</p>
         </label>
       </section>
     </main>

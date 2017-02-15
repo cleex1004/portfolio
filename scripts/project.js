@@ -23,29 +23,25 @@ Project.loadAll = function(rawData) {
 
 Project.fetchAll = function() {
   if (localStorage.rawData) {
-    let ajaxEtag = $.ajax({
+    $.ajax({
       type: 'HEAD',
       url: 'data/projectData.json'
     }).done(function(data, message, xhr){
       console.log(xhr.getResponseHeader('ETag'));
-      return(xhr.getResponseHeader('ETag'));
-    })
-    if (ajaxEtag === JSON.parse(localStorage.getItem('Etag'))) {
-      Project.loadAll(JSON.parse(localStorage.getItem('rawData')));
-      projectView.initIndexPage();
-    } else {
-      $.getJSON('/data/projectData.json').done(function(rawData){
-        Project.loadAll(rawData);
-        localStorage.setItem('rawData', JSON.stringify(rawData));
-      });
-      $.ajax({
-        type: 'HEAD',
-        url: 'data/projectData.json'
-      }).done(function(data, message, xhr){
-        localStorage.setItem('ETag', JSON.stringify(xhr.getResponseHeader('ETag')));
+      if (xhr.getResponseHeader('ETag') === JSON.parse(localStorage.getItem('ETag'))) {
+        console.log('etags match');
+        Project.loadAll(JSON.parse(localStorage.getItem('rawData')));
         projectView.initIndexPage();
-      });
-    }
+      } else {
+        $.getJSON('/data/projectData.json').done(function(rawData){
+          Project.loadAll(rawData);
+          localStorage.rawData = JSON.stringify(rawData);
+          localStorage.ETag = JSON.stringify(xhr.getResponseHeader('ETag'));
+          console.log('else1 etags dont match');
+          projectView.initIndexPage();
+        });
+      }
+    })
   } else {
     $.getJSON('/data/projectData.json').done(function(rawData){
       Project.loadAll(rawData);
@@ -56,8 +52,8 @@ Project.fetchAll = function() {
       url: 'data/projectData.json'
     }).done(function(data, message, xhr){
       localStorage.setItem('ETag', JSON.stringify(xhr.getResponseHeader('ETag')));
-      console.log(xhr.getResponseHeader('ETag'));
+      console.log('else2 etag');
       projectView.initIndexPage();
     });
   }
-};
+}
