@@ -34,31 +34,42 @@
         <nav class="main-nav">
           <h3 class="icon-menu"></h3>
           <ul>
-            <li class="tab" data-content="home"><a href="#" class="icon-home"> Home</a></li>
+            <li class="tab" data-content="home"><a href="index.html" class="icon-home"> Home</a></li>
             <li class="tab" data-content="projects"><a href="#" class="icon-folder"> Projects</a></li>
-            <li class="tab"><a target="_blank" href="https://github.com/cleex1004" class="icon-github"> Github</a></li>
-            <li class="tab" data-content="about-me"><a href="#" class="icon-woman"> About Me</a></li>
-            <li class="tab" data-content="contact"><a href="#" class="icon-envelop"> Contact</a></li>
           </ul>
         </nav>
       </header>
       <section id="home" class="tab-content">
-        <h2 class="center section-head">Welcome To My Portfolio</h2>
-        <p>This is my landing page that will show a little bit of my portfolio before they navigate to the section they want to see.</p>
+      </section>
+      <section id="write">
+        <h2 class="center">New Project</h2>
+        <form action="#" id="new-form">
+          <label>
+            <input type="text" id="project-name" placeholder="Project Name" required>
+          </label>
+          <label>
+            <input type="text" id="project-date" placeholder="Project Date" required>
+          </label>
+          <textarea id="project-description" placeholder="Project Description" rows="8" cols="40" required></textarea>
+          <label>
+            <input type="text" id="project-image" placeholder="Project Image" required>
+          </label>
+          <label>
+            <input type="text" id="project-link" placeholder="Project Link" required>
+          </label>
+          <!-- <label id="published-label">
+            <input type="checkbox" id="project-published"> Published
+          </label> -->
+        </form>
       </section>
       <section id="projects" class="tab-content">
         <h2 class="center section-head">Projects</h2>
       </section>
-      <section id="about-me" class="tab-content">
-        <h2 class="center section-head">About Me</h2>
-        <p>I feel like on the first day of 301, I was thrown into the ocean, not even the deep end pool but the ocean. It's the second day but it feels like its been a week already. Remember to breathe and break down tasks so you do not get overwhelmed.</p>
-        <p>Day 2 wasn't as bad. The lab was pretty straight forward. I'm feeling a little bit more confident. The morning of day 3 was a bit rough because the sleep deprivation is finally catching up. Hopefully I will be able get a good nights rest so I feel bettter tomorrow.</p>
-        <p>I'm glad its a new week and we wont be on a rushed schedule this week. Last week was difficult. I think I might need to use handlebars a few more times. I understand its a template and that I need to make it in the head, add a script tag at the end of my html doc with with the other script tags, but before the ones linking th javascript. then I need to write a method that compiles and renders from source.</p>
-      </section>
-      <section id="contact" class="tab-content">
-        <h2 class="center section-head">Contact</h2>
-        <p>email: cleex1004@gmail.com</p>
-        <p>phone: 253.677.9874</p>
+      <section id="project-export" class="">
+        <label id="export-field" for="project-json">
+          <input type="text" readonly id="project-json">
+          <p class="text-right">When finalized, copy the above JSON, and paste into projectData.json</p>
+        </label>
       </section>
     </main>
     <footer>
@@ -77,7 +88,7 @@
     <script src="scripts/project.js" type="text/javascript"></script>
     <script src="scripts/projectView.js" type="text/javascript"></script>
     <script>
-      Project.fetchAll();
+      projectView.initNewProjectPage();
     </script>
   </body>
 </html>

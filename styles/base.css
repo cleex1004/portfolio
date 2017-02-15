@@ -40,14 +40,75 @@ p {
   color: #000080;
 }
 
+/*li {
+  font-family: 'Arimo';
+}*/
+
+a {
+  color: #000080;
+  text-decoration: none;
+  font-family: 'Arimo';
+}
+
 a:link {
-  color: #000080;;
+  color: #000080;
+  text-decoration: none;
+  font-family: 'Arimo';
 }
 
 a:visited {
   color: #000080;
+  text-decoration: none;
+  font-family: 'Arimo';
 }
 
 a:hover {
   color: #00E0D5;
+  text-decoration: none;
+  font-family: 'Arimo';
+}
+
+form {
+  font-size: 1em;
+  font-family: 'Sahitya';
+  color: #000080;
+}
+
+label {
+  font-size: 1.1em;
+  font-family: 'Sahitya';
+  color: #000080;
+}
+
+input {
+  width: 70%;
+  margin: 2% 15% 2% 15%;
+  border: 1px solid #00E0D5;
+  border-width: 0 0 1px 0;
+  font-size: 1.1em;
+  font-family: 'Sahitya';
+  color: #000080;
+}
+
+input:invalid, textarea:invalid {
+  border-color: #000080;
+}
+
+input:valid, textarea:valid {
+  border-color: #00E0D5;
+}
+
+textarea {
+  width: 70%;
+  margin: 2% 15% 2% 15%;
+  font-size: 1.2em;
+  border: 1px solid #00E0D5;
+  font-family: 'Sahitya';
+  color: #000080;
+}
+
+input[type="checkbox"] {
+  width: 1.25em;
+  height: 1.25em;
+  font-size: 1.25em;
 }

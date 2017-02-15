@@ -9,6 +9,10 @@ footer {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .left {
   float: left;
 }
@@ -33,7 +37,41 @@ footer {
   margin: 5%;
 }
 
+#project-export {
+  margin: 5%;
+  display: block;
+  width: 70%;
+}
+
+#project-export p {
+  /*display: inline-block;*/
+  width: inherit;
+}
+
+#project-json {
+  width: 100%;
+}
+
+#project-published {
+  margin: 2% 2% 2% 15%;
+}
+
 .section-head {
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+.project-header {
+  margin-bottom: 1em;
+  margin-top: 1em;
+  display: inline-block;
+  width: 100%;
+}
+
+.project-body {
+ margin-left: 1.5em;
+}
+
+.project-text {
+  margin-left: 1.5em;
 }
