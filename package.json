@@ -1,0 +1,30 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Codefellows 301 Portfolio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cleex1004/portfolio.git"
+  },
+  "keywords": [
+    "301",
+    "codefellows",
+    "portfolio",
+    "class-07",
+    "christina"
+  ],
+  "author": "Christina Lee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cleex1004/portfolio/issues"
+  },
+  "homepage": "https://github.com/cleex1004/portfolio#readme",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
