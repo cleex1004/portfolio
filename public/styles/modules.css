@@ -19,6 +19,11 @@
   font-size: 1.5em;
 }
 
+#profile-pic {
+  display: flex;
+  justify-content: center;
+}
+
 .project-name {
 
 }
@@ -41,6 +46,10 @@
 
 #published-label {
   font-size: 1.4em;
+}
+
+#contact p {
+  font-size: 1.25em;
 }
 
 .footer {
