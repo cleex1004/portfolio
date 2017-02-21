@@ -24,6 +24,18 @@
   justify-content: center;
 }
 
+.facts {
+  display: inline-block;
+}
+
+dt {
+  display: inline-table;
+}
+
+dd {
+  display: inline-table;
+}
+
 .project-name {
 
 }

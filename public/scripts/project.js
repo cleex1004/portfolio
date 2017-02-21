@@ -1,59 +1,75 @@
 'use strict';
 
-function Project(opts) {
-  this.name = opts.name;
-  this.date = opts.date;
-  this.description = opts.description;
-  this.image = opts.image;
-  this.link = opts.link;
-}
+(function(module){
 
-Project.all = [];
-
-Project.prototype.toHtml = function() {
-  let template = Handlebars.compile($('#project-template').text());
-  return template(this);
-};
-
-Project.loadAll = function(rawData) {
-  rawData.forEach(function(ele) {
-    Project.all.push(new Project(ele));
-  })
-};
-
-Project.fetchAll = function() {
-  if (localStorage.rawData) {
-    $.ajax({
-      type: 'HEAD',
-      url: 'data/projectData.json'
-    }).done(function(data, message, xhr){
-      console.log(xhr.getResponseHeader('ETag'));
-      if (xhr.getResponseHeader('ETag') === JSON.parse(localStorage.getItem('ETag'))) {
-        console.log('etags match');
-        Project.loadAll(JSON.parse(localStorage.getItem('rawData')));
-        projectView.initIndexPage();
-      } else {
-        $.getJSON('data/projectData.json').done(function(rawData){
-          Project.loadAll(rawData);
-          localStorage.rawData = JSON.stringify(rawData);
-          localStorage.ETag = JSON.stringify(xhr.getResponseHeader('ETag'));
-          console.log('else1 etags dont match');
-          projectView.initIndexPage();
-        });
-      }
-    })
-  } else {
-    $.getJSON('data/projectData.json').done(function(rawData){
-      Project.loadAll(rawData);
-      localStorage.setItem('rawData', JSON.stringify(rawData));
-    });
-    $.ajax({
-      type: 'HEAD',
-      url: 'data/projectData.json'
-    }).done(function(data, message, xhr){
-      localStorage.setItem('ETag', JSON.stringify(xhr.getResponseHeader('ETag')));
-      console.log('else2 etag');
-      projectView.initIndexPage();
-    });
+  function Project(opts) {
+    this.name = opts.name;
+    this.date = opts.date;
+    this.description = opts.description;
+    this.image = opts.image;
+    this.link = opts.link;
+    this.days = opts.days;
   }
-}
+
+  Project.all = [];
+
+  Project.prototype.toHtml = function() {
+    let template = Handlebars.compile($('#project-template').text());
+    return template(this);
+  };
+
+  Project.loadAll = function(rawData) {
+    rawData.sort((a,b) => (new Date(a.date)) - (new Date(b.date)));
+
+    Project.all = rawData.map(function(ele) {
+      return new Project(ele);
+    })
+  };
+
+  Project.fetchAll = function() {
+    if (localStorage.rawData) {
+      $.ajax({
+        type: 'HEAD',
+        url: 'data/projectData.json'
+      }).done(function(data, message, xhr){
+        console.log(xhr.getResponseHeader('ETag'));
+        if (xhr.getResponseHeader('ETag') === JSON.parse(localStorage.getItem('ETag'))) {
+          console.log('etags match');
+          Project.loadAll(JSON.parse(localStorage.getItem('rawData')));
+          projectView.initIndexPage();
+        } else {
+          $.getJSON('data/projectData.json').done(function(rawData){
+            Project.loadAll(rawData);
+            localStorage.rawData = JSON.stringify(rawData);
+            localStorage.ETag = JSON.stringify(xhr.getResponseHeader('ETag'));
+            console.log('else1 etags dont match');
+            projectView.initIndexPage();
+          });
+        }
+      })
+    } else {
+      $.getJSON('data/projectData.json').done(function(rawData){
+        Project.loadAll(rawData);
+        localStorage.setItem('rawData', JSON.stringify(rawData));
+      });
+      $.ajax({
+        type: 'HEAD',
+        url: 'data/projectData.json'
+      }).done(function(data, message, xhr){
+        localStorage.setItem('ETag', JSON.stringify(xhr.getResponseHeader('ETag')));
+        console.log('else2 etag');
+        projectView.initIndexPage();
+      });
+    }
+  };
+
+  Project.days = function() {
+    return Project.all.map(function(z) {
+      return z.days;
+    }).reduce(function(acc, current) {
+      return acc + current;
+    })
+  };
+
+  module.Project = Project;
+})(window);
