@@ -4,20 +4,31 @@
    "date": "2017-1-16",
    "description": "201 week 3 project. Uses chart.js, event handlers and localstorage.",
    "image": "images/busmall.jpg",
-   "link": "https://cleex1004.github.io/bus-mall/"
+   "link": "https://cleex1004.github.io/bus-mall/",
+   "days": 6
 },
 {
    "name": "Salmon Cookies",
    "date": "2017-1-9",
    "description": "201 week 2 project. Uses forms, methods, tables, and DOM work.",
    "image": "images/salmoncookies.jpg",
-   "link": "https://cleex1004.github.io/cookie-stand/"
+   "link": "https://cleex1004.github.io/cookie-stand/",
+   "days": 5
 },
 {
    "name": "Meme-ory",
    "date": "2017-1-23",
    "description": "201 week 4 group project. Uses event handlers, random functions, localstorage,and DOM work.",
    "image": "images/memeory.png",
-   "link": "https://the-meme-team.github.io/meme-ory/"
+   "link": "https://the-meme-team.github.io/meme-ory/",
+   "days": 4
+},
+{
+  "name":"About Me",
+  "date":"2017-1-3",
+  "description":"201 week 1 project. Uses vanilla Javascript if/else statements and for loops. First javascript ever written.",
+  "image":"images/profilepic.jpg",
+  "link":"https://cleex1004.github.io/About-Me/",
+  "days": 6
 }
 ]

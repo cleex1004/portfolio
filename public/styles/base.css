@@ -40,6 +40,15 @@ p {
   color: #000080;
 }
 
+dt {
+  font-family: 'Sahitya';
+  color: #000080;
+}
+
+dd {
+  font-family: 'Sahitya';
+  color: #000080;
+}
 /*li {
   font-family: 'Arimo';
 }*/
