@@ -3,6 +3,7 @@ footer {
   margin-right: 25%;
   width: 50%;
   clear: both;
+  margin-top: 1em;
 }
 
 .center {
@@ -70,6 +71,7 @@ footer {
 
 .project-body {
  margin-left: 1.5em;
+ margin-bottom: 1em;
 }
 
 .project-text {

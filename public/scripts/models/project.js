@@ -6,6 +6,7 @@
     this.name = opts.name;
     this.date = opts.date;
     this.description = opts.description;
+    this.class = opts.class;
     this.image = opts.image;
     this.link = opts.link;
     this.days = opts.days;

@@ -1,6 +1,7 @@
 .icon-menu {
-  display: inline-block;
-  float:right;
+  display: block;
+  /*float:right;*/
+  text-align: right;
   font-size: 2.5em;
 }
 
@@ -19,7 +20,7 @@
   font-size: 1.5em;
 }
 
-#profile-pic {
+.content-center {
   display: flex;
   justify-content: center;
 }
@@ -30,30 +31,21 @@
 
 dt {
   display: inline-table;
+  margin-bottom: .5em;
 }
 
 dd {
   display: inline-table;
-}
-
-.project-name {
-
+  margin-bottom: .5em;
 }
 
 .project-date {
   font-family:'PT Sans Narrow';
 }
 
-.project-image {
-
-}
-
-.project-link {
-
-}
-
-.project-description {
-
+#class-filter {
+  font-size: 1em;
+  color: #000080;
 }
 
 #published-label {
@@ -81,8 +73,9 @@ dd {
 
 @media only screen and (min-width:769px) {
   .icon-menu {
-    visibility: hidden;
+    display: none;
   }
+
   .main-nav ul {
     display: flex;
     justify-content: space-around;
