@@ -24,9 +24,7 @@
         </div>
       </section>
     </script>
-    <!-- <script id="facts-template" type="text/x-handlebars-template">
-      <li>Days I have spent working on projects: {{days}}</li>
-      <li>Number of Projects Completed: {{projectNumber}}</li>
+    <!-- <script id="github-info-template" type="text/x-handlebars-template">
     </script> -->
   </head>
 
@@ -41,7 +39,7 @@
           <ul>
             <li class="tab center" data-content="home"><a href="/" class="icon-home"> Home</a></li>
             <li class="tab center" data-content="projects"><a href="/projects" class="icon-folder"> Projects</a></li>
-            <li class="tab center"><a target="_blank" href="https://github.com/cleex1004" class="icon-github"> Github</a></li>
+            <li class="tab center" data-content="github"><a href="/github" class="icon-github"> Github</a></li>
             <li class="tab center" data-content="about-me"><a href="/about" class="icon-woman"> About Me</a></li>
             <li class="tab center" data-content="contact"><a href="/contact" class="icon-envelop"> Contact</a></li>
           </ul>
@@ -71,6 +69,15 @@
           </ul> -->
         </div>
       </section>
+      <section id="github" class="tab-content">
+        <h2 class="center section-head">GitHub Info</h2>
+        <a target="_blank" href="https://github.com/cleex1004"></a>
+        <section>
+          <ul id="github-info">
+            <li class="pink bold" id="repo-number"></li>
+          </ul>
+        </section>
+      </section>
       <section id="about-me" class="tab-content">
         <h2 class="center section-head">About Me</h2>
         <p>I feel like on the first day of 301, I was thrown into the ocean, not even the deep end pool but the ocean. It's the second day but it feels like its been a week already. Remember to breathe and break down tasks so you do not get overwhelmed.</p>
@@ -96,9 +103,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
     <script src ="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.7.1/page.min.js"></script>
     <script src="scripts/models/project.js" type="text/javascript"></script>
+    <script src="scripts/models/githubtoken.js"></script>
     <script src="scripts/views/projectView.js" type="text/javascript"></script>
     <script src="scripts/controllers/homeController.js" type="text/javascript"></script>
     <script src="scripts/controllers/projectController.js" type="text/javascript"></script>
+    <script src="scripts/controllers/githubController.js" type="text/javascript"></script>
     <script src="scripts/controllers/aboutController.js" type="text/javascript"></script>
     <script src="scripts/controllers/contactController.js" type="text/javascript"></script>
     <script src="scripts/controllers/routes.js" type="text/javascript"></script>
