@@ -8,7 +8,6 @@
     $('.tab-content').hide();
     $('#github').show();
     $.get('/github/user/repos').then(data => {
-      console.log(data);
       data.forEach(repo => $('#github-info').append(`<li>${repo.name}: ${repo.created_at}</li>`));
       $('#repo-number').text(`Total Number of Repositories: ${data.length}`);
     }, err => {
