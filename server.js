@@ -14,12 +14,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
 
-app.get('/', (request, response) => response.sendFile('index.html', {root: '.'}));
+app.get('*', (request, response) => response.sendFile('index.html', {root: './public'}));
 app.get('/new', (request, response) => response.sendFile('new.html', {root: './public'}));
 app.get('/home', (request, response) => response.sendFile('index.html', {root: './public'}));
 app.get('/projects', (request, response) => response.sendFile('index.html', {root: './public'}));
 app.get('/github', (request, response) => response.sendFile('index.html', {root: './public'}));
 app.get('/github/*', proxyGitHub);
+app.get('/about', (request, response) => response.sendFile('index.html', {root: './public'}));
+app.get('/contact', (request, response) => response.sendFile('index.html', {root: './public'}));
 
 function proxyGitHub(request, response) {
   console.log('Routing a GitHub request for ', request.params[0]);
@@ -28,9 +30,6 @@ function proxyGitHub(request, response) {
     headers: {Authorization: `token ${process.env.GITHUB_TOKEN}`}
   }))(request, response);
 }
-
-app.get('/about', (request, response) => response.sendFile('index.html', {root: './public'}));
-app.get('/contact', (request, response) => response.sendFile('index.html', {root: './public'}));
 
 
 app.listen(PORT, function() {
