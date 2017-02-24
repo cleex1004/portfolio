@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
 
-app.get('*', (request, response) => response.sendFile('index.html', {root: './public'}));
+app.get('/', (request, response) => response.sendFile('index.html', {root: './public'}));
 app.get('/new', (request, response) => response.sendFile('new.html', {root: './public'}));
 app.get('/home', (request, response) => response.sendFile('index.html', {root: './public'}));
 app.get('/projects', (request, response) => response.sendFile('index.html', {root: './public'}));
