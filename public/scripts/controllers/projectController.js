@@ -6,6 +6,7 @@
   projectController.init = function(){
     $('.tab-content').hide();
     $('#projects').show();
+    Project.fetchAll();
   };
 
   module.projectController = projectController;
