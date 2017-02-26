@@ -33,9 +33,9 @@
         type: 'HEAD',
         url: 'data/projectData.json'
       }).done(function(data, message, xhr){
-        console.log(xhr.getResponseHeader('ETag'));
+        //console.log(xhr.getResponseHeader('ETag'));
         if (xhr.getResponseHeader('ETag') === JSON.parse(localStorage.getItem('ETag'))) {
-          console.log('etags match');
+          //console.log('etags match');
           Project.loadAll(JSON.parse(localStorage.getItem('rawData')));
           projectView.initIndexPage();
         } else {
@@ -43,7 +43,7 @@
             Project.loadAll(rawData);
             localStorage.rawData = JSON.stringify(rawData);
             localStorage.ETag = JSON.stringify(xhr.getResponseHeader('ETag'));
-            console.log('else1 etags dont match');
+            //console.log('else1 etags dont match');
             projectView.initIndexPage();
           });
         }
@@ -58,7 +58,7 @@
         url: 'data/projectData.json'
       }).done(function(data, message, xhr){
         localStorage.setItem('ETag', JSON.stringify(xhr.getResponseHeader('ETag')));
-        console.log('else2 etag');
+        //console.log('else2 etag');
         projectView.initIndexPage();
       });
     }

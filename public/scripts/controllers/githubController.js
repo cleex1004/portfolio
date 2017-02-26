@@ -7,7 +7,9 @@
     window.open('https://github.com/cleex1004', '_blank');
     $('.tab-content').hide();
     $('#github').show();
+
     repos.requestRepos(repos.githubView);
+
   };
 
   module.githubController = githubController;
