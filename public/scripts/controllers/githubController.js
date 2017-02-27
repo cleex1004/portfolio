@@ -9,7 +9,6 @@
     $('#github').show();
 
     repos.requestRepos(repos.githubView);
-
   };
 
   module.githubController = githubController;

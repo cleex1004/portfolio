@@ -11,21 +11,21 @@
     <link rel="stylesheet" href="styles/modules.css">
     <link href="https://fonts.googleapis.com/css?family=Arimo|Arvo|PT+Sans+Narrow|Raleway|Sahitya" rel="stylesheet">
     <script id="project-template" type="text/x-handlebars-template">
-      <header class="project-header">
-        <h4 class="project-name">{{name}}</h4>
-        <h4 class="project-date">{{date}}</h4>
-      </header>
-      <section class="project-body left">
-        <a target="_blank" href="{{link}}" class="project-link"><img src="{{image}}" class="project-image left"></a>
-        <div class="project-text left">
-          <p class="project-class">{{class}}</p>
-          <p class="project-description">{{description}}</p>
-          <a target="_blank" href="{{link}}" class="project-link">LINK</a>
-        </div>
-      </section>
+      <article data-class="{{class}}">
+        <header class="project-header">
+          <h4 class="project-name">{{name}}</h4>
+          <h4 class="project-date">{{date}}</h4>
+        </header>
+        <section class="project-body left">
+          <a target="_blank" href="{{link}}" class="project-link"><img src="{{image}}" class="project-image left"></a>
+          <div class="project-text left">
+            <p class="project-class">{{class}}</p>
+            <p class="project-description">{{description}}</p>
+            <a target="_blank" href="{{link}}" class="project-link">LINK</a>
+          </div>
+        </section>
+    </article>
     </script>
-    <!-- <script id="github-info-template" type="text/x-handlebars-template">
-    </script> -->
   </head>
 
   <body>
@@ -60,13 +60,13 @@
       <section id="projects" class="tab-content">
         <h2 class="center section-head">Projects</h2>
         <div class="content-center">
-          <!-- <ul id="filter">
+          <ul id="filter">
             <li>
               <select id="class-filter">
                 <option value="">-- Filter by Class --</option>
               </select>
             </li>
-          </ul> -->
+          </ul>
         </div>
       </section>
       <section id="github" class="tab-content">
