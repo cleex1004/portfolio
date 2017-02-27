@@ -34,5 +34,14 @@
   "image":"images/profilepic.JPG",
   "link":"https://cleex1004.github.io/About-Me/",
   "days": 6
+},
+{
+  "name":"Porfolio",
+  "date":"2017-2-7",
+  "description":"Ongoing 301 project. Uses jQuery, AJAX, Handlebars, Node, Postgres, SQL, functional programming, REST, page.js, Express.",
+  "class":"301",
+  "image":"images/profilepic.JPG",
+  "link":"https://christinaportfolio.herokuapp.com/",
+  "days": 18
 }
 ]
